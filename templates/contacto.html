@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="contacto">
+	<h2>Contactame</h2>
+	<form action="/contacto" method="post">
+		<input type="text" name="asunto" placeholder="Titulo del mensaje" required>
+		<input type="text" name="name" placeholder="Tu correo electronico" required>
+		<textarea placeholder="Contenido del mensaje..." name="mensaje" required autocomplete></textarea>
+		<input type="submit">
+	</form>
+</div>
+{% endblock %}

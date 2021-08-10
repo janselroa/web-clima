@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>clima</title>
+    <link rel="stylesheet" href="{{ url_for('static' ,filename='css/styles.css') }}">
+    <link rel="icon" href="{{ url_for('static',filename='img/logo.jpg') }}">
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="{{ url_for('index') }}">Inicio</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+        
+    </ul>
+</nav>
+
+{% block content %}
+{% endblock %}
+<footer>
+    <p>2021 &copy by Jansel Roa, Proyect open source <a target="_blank" href="https://github.com/janselroa/web-clima">repo</a></p>
+</footer>
+</body>
+</html>

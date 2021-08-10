@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="clima">
+		<h1>{{ clima[0] }}</h1>
+		<h2>{{ clima[1] }}</h2>
+		{% if clima[1] == 'cielo claro' %}
+				<img class="estado_clima" src="{{ url_for('static',filename='img/sol.jpg') }}" alt="cielo claro">
+		{% elif clima[1] == 'nubes' %}
+			<img class="estado_clima" src="{{ url_for('static',filename='img/nubes.jpg') }}" alt="nubes">
+		{% elif clima[1] == 'algo de nubes' %}
+			<img class="estado_clima" src="{{ url_for('static',filename='img/nubes.jpg') }}" alt="nubes">
+	
+		{% endif %}
+		<h2>{{ clima[2] }}°C</h2>
+</div>
+{% endblock %}
